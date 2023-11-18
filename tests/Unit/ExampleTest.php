@@ -17,6 +17,6 @@ class ExampleTest extends TestCase
     public function test_suma(): void{
         $instance = new Operations_controller();
         $result=$instance->suma(4,6);
-        $this->assertEquals(10,$result);
+        $this->assertEquals(11,$result);
     }
 }
