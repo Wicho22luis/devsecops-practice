@@ -23,7 +23,7 @@ class ExampleTest extends TestCase
 
     public function test_esBiciesto(): void{
         $instance = new Operations_controller();
-        $result = $instance->esBisiesto(2020);
+        $result = $instance->esBisiesto(2021);
 
         $this->assertEquals($result,"esBiciesto");
         $this->assertIsString($result);
@@ -34,7 +34,7 @@ class ExampleTest extends TestCase
     }
     public function test_filtrarNumerosPares(): void{
         $instance = new Operations_controller();
-        $arregloNumerico = array(1,2,3,4,5,6,7,8,9,10);
+        $arregloNumerico = array(1,2,3,5,6,7,8,9,10);
         $result = $instance->filtrarNumerosPares($arregloNumerico);
         $this->assertEquals($result, array(2,4,6,8,10));
         $this->assertContains(4, $result);
@@ -67,7 +67,7 @@ class ExampleTest extends TestCase
     }
     public function test_ordenarArregloNumerico(): void{
         $instance = new Operations_controller();
-        $arregloNumerico = array(3,500,2,12,186,421,999,89);
+        $arregloNumerico = array(3,2,12,186,421,999,89);
         $result = $instance->ordenarArregloNumerico($arregloNumerico);
         $this->assertEquals($result[0],2);
         $this->assertContains(500, $arregloNumerico);
